@@ -1,0 +1,467 @@
+<html>
+<head>
+<style type="text/css">
+.table1 {border-width: 1px; position:absolute; margin-top:200px; margin-left:30px; width:10%; min-width:20px; max-width:80px;}
+.table2 {border-width: 1px; position:absolute; margin-top:200px; margin-left:180px; width:10%; min-width:20px; max-width:80px;}
+.table3 {border-width: 1px; position:absolute; margin-top:200px; margin-left:330px; width:10%; min-width:20px; max-width:80px;}
+.table4 {border-width: 1px; position:absolute; margin-top:200px; margin-left:470px; width:10%; min-width:20px; max-width:80px;}
+.table5 {border-width: 1px; position:absolute; margin-top:200px; margin-left:680px; width:10%; min-width:20px; max-width:80px;}
+.table6 {border-width: 1px; position:absolute; margin-top:200px; margin-left:830px; width:10%; min-width:20px; max-width:80px;}
+.table7 {border-width: 1px; position:absolute; margin-top:200px; margin-left:980px; width:10%; min-width:20px; max-width:80px;}
+.table8 {border-width: 1px; position:absolute; margin-top:200px; margin-left:1120px; width:10%; min-width:20px; max-width:80px;}
+.table9 {border-width: 1px; position:absolute; margin-top:300px; margin-left:30px; width:10%; min-width:20px; max-width:80px;}
+.table10 {border-width: 1px; position:absolute; margin-top:300px; margin-left:180px; width:10%; min-width:20px; max-width:80px;}
+.table11 {border-width: 1px; position:absolute; margin-top:300px; margin-left:330px; width:10%; min-width:20px; max-width:80px;}
+.table12 {border-width: 1px; position:absolute; margin-top:300px; margin-left:470px; width:10%; min-width:20px; max-width:80px;}
+.table13 {border-width: 1px; position:absolute; margin-top:300px; margin-left:680px; width:10%; min-width:20px; max-width:80px;}
+.table14 {border-width: 1px; position:absolute; margin-top:300px; margin-left:830px; width:10%; min-width:20px; max-width:80px;}
+.table15 {border-width: 1px; position:absolute; margin-top:300px; margin-left:980px; width:10%; min-width:20px; max-width:80px;}
+.table16 {border-width: 1px; position:absolute; margin-top:300px; margin-left:1120px; width:10%; min-width:20px; max-width:80px;}
+.table17 {border-width: 1px; position:absolute; margin-top:400px; margin-left:30px; width:10%; min-width:20px; max-width:80px;}
+.table18 {border-width: 1px; position:absolute; margin-top:400px; margin-left:180px; width:10%; min-width:20px; max-width:80px;}
+.table19 {border-width: 1px; position:absolute; margin-top:400px; margin-left:330px; width:10%; min-width:20px; max-width:80px;}
+.table20 {border-width: 1px; position:absolute; margin-top:400px; margin-left:470px; width:10%; min-width:20px; max-width:80px;}
+.table21 {border-width: 1px; position:absolute; margin-top:400px; margin-left:680px; width:10%; min-width:20px; max-width:80px;}
+.table22 {border-width: 1px; position:absolute; margin-top:400px; margin-left:830px; width:10%; min-width:20px; max-width:80px;}
+.table23 {border-width: 1px; position:absolute; margin-top:400px; margin-left:980px; width:10%; min-width:20px; max-width:80px;}
+.table24 {border-width: 1px; position:absolute; margin-top:400px; margin-left:1120px; width:10%; min-width:20px; max-width:80px;}
+.table25 {border-width: 1px; position:absolute; margin-top:500px; margin-left:30px; width:10%; min-width:20px; max-width:80px;}
+.table26 {border-width: 1px; position:absolute; margin-top:500px; margin-left:180px; width:10%; min-width:20px; max-width:80px;}
+.table27 {border-width: 1px; position:absolute; margin-top:500px; margin-left:330px; width:10%; min-width:20px; max-width:80px;}
+.table28 {border-width: 1px; position:absolute; margin-top:500px; margin-left:470px; width:10%; min-width:20px; max-width:80px;}
+.table29 {border-width: 1px; position:absolute; margin-top:500px; margin-left:680px; width:10%; min-width:20px; max-width:80px;}
+.table30 {border-width: 1px; position:absolute; margin-top:500px; margin-left:830px; width:10%; min-width:20px; max-width:80px;}
+.table31 {border-width: 1px; position:absolute; margin-top:500px; margin-left:980px; width:10%; min-width:20px; max-width:80px;}
+.table32 {border-width: 1px; position:absolute; margin-top:500px; margin-left:1120px; width:10%; min-width:20px; max-width:80px;}
+.prof {position:absolute; left:560px; top:130px;}
+.log {position:absolute; left:100px; top:60px;}
+.heroku {position:absolute; left:900px; top:80px; font-family:"Times New Roman", Times, serif; font-size:20px;}
+</style>
+</head>
+<div align="center">
+<p><h1> CS-408 CLASSROOM SEATING CHART<h1></p>
+<hr> </hr>
+</div>
+<div class="prof">
+<p><h2> Prof. Kenytt Avery <h2><p>
+</div>
+<div class="table1">
+  <table border="1">
+<% chart = Chart.find(3) %>
+    <th><%= chart.snumber %></th>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+   </table>
+</div>
+<div class="table2">
+  <table border="1">
+<% chart = Chart.find(4) %>
+    <th><%= chart.snumber %></th>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </table>
+</div>
+<div class="table3">
+  <table border="1">
+<% chart = Chart.find(5) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table4">
+  <table border="1">
+<% chart = Chart.find(6) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table5">
+  <table border="1">
+<% chart = Chart.find(7) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table6">
+  <table border="1">
+<% chart = Chart.find(8) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table7">
+  <table border="1">
+<% chart = Chart.find(9) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table8">
+  <table border="1">
+<% chart = Chart.find(10) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table9">
+  <table border="1">
+<% chart = Chart.find(11) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table10">
+  <table border="1">
+<% chart = Chart.find(12) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table11">
+  <table border="1">
+<% chart = Chart.find(14) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table12">
+  <table border="1">
+<% chart = Chart.find(15) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table13">
+  <table border="1">
+<% chart = Chart.find(16) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table14">
+  <table border="1">
+<% chart = Chart.find(17) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table15">
+  <table border="1">
+<% chart = Chart.find(18) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table16">
+  <table border="1">
+<% chart = Chart.find(19) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table17">
+  <table border="1">
+<% chart = Chart.find(20) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table18">
+  <table border="1">
+<% chart = Chart.find(21) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table19">
+  <table border="1">
+<% chart = Chart.find(22) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table20">
+  <table border="1">
+<% chart = Chart.find(23) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table21">
+  <table border="1">
+<% chart = Chart.find(24) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table22">
+  <table border="1">
+<% chart = Chart.find(25) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table23">
+  <table border="1">
+<% chart = Chart.find(26) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table24">
+  <table border="1">
+<% chart = Chart.find(27) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table25">
+  <table border="1">
+<% chart = Chart.find(28) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table26">
+  <table border="1">
+<% chart = Chart.find(29) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table27">
+  <table border="1">
+<% chart = Chart.find(30) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table28">
+  <table border="1">
+<% chart = Chart.find(31) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table29">
+  <table border="1">
+<% chart = Chart.find(32) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table30">
+  <table border="1">
+<% chart = Chart.find(33) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table31">
+  <table border="1">
+<% chart = Chart.find(34) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="table32">
+  <table border="1">
+<% chart = Chart.find(35) %>
+    <tr>
+    <th><%= chart.snumber %></th>
+    </tr>
+    <tr>
+    <td bgcolor="#33FF00"><%= chart.name %></td>
+    <td><%= link_to 'Reserve', chart %></td>
+    </tr>
+    </tr>
+</table>
+</div>
+<div class="log">
+<h2><%= link_to 'Logout', logout_path %></h2>
+</div>
+<div class="heroku">
+<a href="http://vivid-lightning-479.heroku.com/" target="_blank">Want to chat with your classmates? Click here!</a>
+<div>
+</html>
+
+
+

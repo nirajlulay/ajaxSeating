@@ -1,0 +1,48 @@
+<head>
+<style type="text/css">
+.table1 {position:relative; margin-top:70px; margin-left:540px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+.table2 {position:absolute; margin-top:5px; margin-left:540px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+.table3 {position:absolute; margin-top:35px; margin-left:540px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+.table4 {position:absolute; margin-top:70px; margin-left:540px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+.table5 {position:absolute; margin-top:110px; margin-left:540px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+.table6 {position:absolute; margin-top:130px; margin-left:540px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+.table7 {position:absolute; margin-top:130px; margin-left:800px;font-family:"Times New Roman", Times, serif; font-size:25px; }
+
+h1{font-family:"Times New Roman", Times, serif; font-size:35px;}
+</style>
+</head>
+
+<%= form_for(@user) do |f| %>
+ <% if @user.errors.any? %>
+ <div id="errorExplanation">
+   <h2><%= pluralize(@user.errors.count, "error") %> 
+prohibited this user from being saved:</h2>
+   <ul>
+   <% @user.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+ 
+ </div>
+ <% end %>
+
+ <div class="field">
+   <div class="table1"><%= f.label :email %></div><br />
+   <div class="table2"><%= f.text_field :email %></div>
+ </div>
+ <div class="field">
+   <div class="table3"><%= f.label :password %><br /></div>
+   <div class="table4"><%= f.password_field :password %></div>
+ </div>
+ 
+<div class="field">
+   <div class="table5"><%= f.label :password_confirmation %></div><br />
+  <div class="table6"><%= f.password_field :password_confirmation %></div>
+ </div>
+<div class="table7">
+<div class="actions">
+   <%= f.submit %>
+ </div>
+</div>
+<% end %>
+ 

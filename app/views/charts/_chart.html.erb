@@ -1,0 +1,10 @@
+<%= div_for chart do %>
+  <h3>
+    <%= link_to chart.snumber, chart %>
+    <span class='actions'>
+      <%= link_to "Edit", edit_article_path(chart) %>
+      <%= link_to "Delete", chart, :confirm => "Are you sure?", :method => :delete %>
+    </span>
+  </h3>
+  <%= chart.body %>
+<% end %>

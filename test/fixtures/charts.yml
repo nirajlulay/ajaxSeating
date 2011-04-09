@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  snumber: 1
+  name: MyString
+
+two:
+  snumber: 1
+  name: MyString

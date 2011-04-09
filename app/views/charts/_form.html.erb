@@ -1,0 +1,38 @@
+<head>
+<style type="text/css">
+.textb {position:absolute; margin-top:120px; margin-left:50px;}
+.textb1 {position:absolute; margin-top:100px; margin-left:50px;}
+.textb3 {position:absolute; margin-top:50px; margin-left:50px;}
+.sub {position:absolute; margin-top:170px; margin-left:50px;}
+</style>
+</head>
+<%= form_for(@chart) do |f| %>
+  <% if @chart.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chart.errors.count, "error") %> prohibited this chart from being saved:</h2>
+
+      <ul>
+      <% @chart.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="textb3">
+  <p>
+  <i><b>Seat Number:</b></i>
+  <i><b><%= @chart.snumber %></b></i>
+  </p>
+  </div>
+
+    <div class="field">
+    <b><i class="textb1"><%= f.label :Enter_Your_Name %></i></b><br />
+    <div class="textb"><%= f.text_field :name, default_text("Empty...")%></div>
+  </div>
+  <div class="sub">
+  <div class="actions">
+    <%= f.submit %>
+   </div>
+  </div>
+<% end %>
+
