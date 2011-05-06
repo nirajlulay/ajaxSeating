@@ -14,11 +14,20 @@ before_filter :authenticate, :except => [:index, :show]
   # GET /charts/1
   # GET /charts/1.xml
   def show
-    @chart = Chart.find(params[:id])
-
+  seatname = Chart.find_by_id(params[:id]).name
+  if seatname == 'Empty...' then
+    lastseat = Chart.find_by_name(current_user.fname)
+       if lastseat != nil
+           lastseat.name = 'Empty...'
+           lastseat.save
+       end
+    selectedseat = Chart.find(params[:id])
+    selectedseat.name = current_user.fname
+    selectedseat.save
+  end
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @chart }
+      format.html {redirect_to(charts_path)}
+      format.js
     end
   end
 
@@ -26,7 +35,7 @@ before_filter :authenticate, :except => [:index, :show]
   # GET /charts/new.xml
   def new
     @chart = Chart.new
-
+  
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @chart }
@@ -73,12 +82,19 @@ before_filter :authenticate, :except => [:index, :show]
   # DELETE /charts/1
   # DELETE /charts/1.xml
   def destroy
-    @chart = Chart.find(params[:id])
-    @chart.destroy
-
+    seatname = Chart.find_by_id(params[:id]).name
+    currentuser = Chart.find(params[:id])
+    currentname = current_user.fname
+    if seatname == currentname
+       seatname = "Empty..."
+       seatname.save
+    end
     respond_to do |format|
       format.html { redirect_to(charts_url) }
-      format.xml  { head :ok }
+      format.js  
     end
   end
 end
+
+ 
+

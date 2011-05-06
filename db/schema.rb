@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110407214736) do
+ActiveRecord::Schema.define(:version => 20110505234124) do
 
   create_table "charts", :force => true do |t|
     t.integer  "snumber"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(:version => 20110407214736) do
     t.string   "hashed_password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "fname"
+    t.string   "lname"
   end
 
 end

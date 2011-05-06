@@ -8,6 +8,11 @@ validates :password, :confirmation => true,
                        :length => { :within => 4..20 },
                        :presence => true,
                        :if => :password_required?
+validates :fname, :presence => true
+                       
+validates :lname, :presence => true
+                       
+
              
 
 #has_one :profile
